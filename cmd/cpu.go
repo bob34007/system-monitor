@@ -11,6 +11,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/system-monitor/cpu"
 	"time"
 )
 
@@ -26,6 +27,12 @@ func NewCpuCommand() *cobra.Command {
 			var err error
 			ts := time.Now()
 			fmt.Println(ts)
+			c := cpu.NewCPUS()
+			c.SetLoadAvg()
+			c.SetInfo()
+			c.SetProcessStatusCount()
+
+			fmt.Println(c.Print())
 			return err
 		},
 	}

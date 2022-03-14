@@ -9,10 +9,9 @@
 package main
 
 import (
-	"os"
-
-	"github.com/soccer-crawler/cmd"
+	"github.com/system-monitor/cmd"
 	"go.uber.org/zap"
+	"os"
 )
 
 func main() {
